@@ -11,7 +11,7 @@ const navItems = [
   { name: "Modes", href: "#modes" },
   { name: "Pricing", href: "#pricing" },
   { name: "FAQ", href: "#faq" },
-  { name: "Docs", href: "#docs" },
+  { name: "Docs", href: "/docs" },
 ];
 
 export default function Navigation() {

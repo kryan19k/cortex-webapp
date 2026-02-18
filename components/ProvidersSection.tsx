@@ -10,20 +10,20 @@ const providers = [
     badge: "Recommended",
     badgeColor: "#7c3aed",
     color: "#7c3aed",
-    models: ["claude-sonnet-4-5", "claude-opus-4", "claude-haiku-4"],
+    models: ["claude-opus-4-6 ★ Best", "claude-sonnet-4-6 ★ Recommended", "claude-haiku-4"],
     description:
-      "Claude is the recommended provider. Its large context window and instruction-following make it the most reliable for complex multi-step Blueprint construction.",
+      "Claude is the strongly recommended provider. claude-opus-4-6 and claude-sonnet-4-6 deliver the best results for complex multi-step Blueprint construction, PCG biomes, and UMG widget creation.",
     pros: [
-      "Best instruction following for complex tasks",
-      "Large context window for long conversations",
-      "Vision support for screenshot analysis",
-      "Fastest for multi-step Blueprint creation",
+      "claude-opus-4-6 & claude-sonnet-4-6 recommended for best results",
+      "Best instruction following for complex Blueprint tasks",
+      "Large context window for long multi-step conversations",
+      "Vision support for screenshot and image analysis",
     ],
     setup: [
       "Go to console.anthropic.com",
       "Create an API key",
       "Select Anthropic Claude in Cortex Settings",
-      "Paste your key and select a model",
+      "Choose claude-opus-4-6 or claude-sonnet-4-6",
     ],
   },
   {

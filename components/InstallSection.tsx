@@ -1,46 +1,40 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Download, FolderOpen, ToggleRight, Rocket } from "lucide-react";
+import { ShoppingBag, ToggleRight, TreePine, Rocket } from "lucide-react";
 
 const steps = [
   {
     number: "01",
-    icon: Download,
+    icon: ShoppingBag,
     color: "#7c3aed",
-    title: "Download from Fab",
-    description: "Get the Cortex plugin from the Fab marketplace. It's free.",
-    code: null,
+    title: "Purchase on Fab",
+    description: "Buy Cortex on the Fab marketplace. Once purchased, it installs directly through Epic Games Launcher — no manual file copying required.",
+    code: `fab.com → Search "Cortex" → Purchase → Install to Engine`,
   },
   {
     number: "02",
-    icon: FolderOpen,
+    icon: ToggleRight,
     color: "#38bdf8",
-    title: "Copy to Your Project",
-    description: "Place the UnrealLLMPlugin folder inside your project's Plugins/ directory.",
-    code: `YourProject/
-└── Plugins/
-    └── UnrealLLMPlugin/
-        ├── UnrealLLMPlugin.uplugin
-        ├── Binaries/
-        └── Source/`,
+    title: "Enable Cortex Plugin",
+    description: "Open your UE5 project, go to Edit → Plugins, search for \"Cortex\" or \"LLM Assistant\", enable it, and restart the editor when prompted.",
+    code: `Edit → Plugins → Search "Cortex" → ✓ Enable → Restart Now`,
   },
   {
     number: "03",
-    icon: ToggleRight,
-    color: "#f97316",
-    title: "Enable the Plugin",
-    description: "Open your project in UE5, go to Edit → Plugins, search for Cortex, enable it, and restart.",
-    code: `Edit → Plugins → Search "Cortex" → Enable → Restart`,
+    icon: TreePine,
+    color: "#4ade80",
+    title: "Enable PCG Plugin (Optional)",
+    description: "For Biome mode, also enable the Procedural Content Generation plugin. If you don't need PCG biomes, skip this step.",
+    code: `Edit → Plugins → Search "Procedural Content Generation" → ✓ Enable → Restart`,
   },
   {
     number: "04",
     icon: Rocket,
-    color: "#4ade80",
+    color: "#f97316",
     title: "Open & Configure",
-    description: "Open via Window → LLM Assistant. Click the ⚙ Settings icon, paste your API key, and start chatting.",
-    code: `Window → LLM Assistant
-⚙ Settings → Paste API Key → Done`,
+    description: "Open Cortex via Window → LLM Assistant (or the toolbar button). Click ⚙ Settings, select your AI provider, paste your API key, and start chatting.",
+    code: `Window → LLM Assistant\n⚙ Settings → Select Provider → Paste API Key → Done`,
   },
 ];
 

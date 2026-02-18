@@ -15,11 +15,11 @@ const faqs = [
   },
   {
     q: "Which AI provider should I use?",
-    a: "Anthropic Claude (claude-sonnet-4-5 or later) is strongly recommended. Its large context window and instruction-following make it the most reliable for complex multi-step Blueprint construction. OpenAI GPT-4o works well too. Local models via Custom Endpoint are supported but produce less reliable results for complex tasks.",
+    a: "Anthropic Claude (claude-sonnet-4-6 or claude-opus-4-6) is strongly recommended. Its large context window and instruction-following make it the most reliable for complex multi-step Blueprint construction. OpenAI GPT-4o works well too. Local models via Custom Endpoint are supported but produce less reliable results for complex tasks.",
   },
   {
     q: "How much does it cost to use Cortex?",
-    a: "The Cortex plugin itself is free. You pay only for the AI API calls you make — directly to Anthropic or OpenAI at their standard rates. A typical Blueprint creation request costs $0.01–0.05. You can also use a self-hosted model via Custom Endpoint for zero API cost.",
+    a: "Cortex is $99 (Standard) or $175 (Professional) — a one-time purchase on Fab. On top of that, you pay for the AI API calls you make directly to Anthropic or OpenAI at their standard rates. A typical Blueprint creation request costs $0.01–0.05 with claude-sonnet-4-6.",
   },
   {
     q: "Is my API key secure?",
