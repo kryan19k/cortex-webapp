@@ -1,0 +1,148 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+  --color-ring: var(--ring);
+  --color-input: var(--input);
+  --color-border: var(--border);
+  --color-destructive: var(--destructive);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent: var(--accent);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-muted: var(--muted);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-secondary: var(--secondary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary: var(--primary);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-popover: var(--popover);
+  --color-card-foreground: var(--card-foreground);
+  --color-card: var(--card);
+  --color-cortex: var(--cortex);
+  --color-cortex-dark: var(--cortex-dark);
+  --color-ue-orange: var(--ue-orange);
+  --color-ue-blue: var(--ue-blue);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+}
+
+:root {
+  --radius: 0.5rem;
+  --background: #08080f;
+  --foreground: #e8e8f0;
+  --card: #0e0e1a;
+  --card-foreground: #e8e8f0;
+  --popover: #0e0e1a;
+  --popover-foreground: #e8e8f0;
+  --primary: #7c3aed;
+  --primary-foreground: #ffffff;
+  --secondary: #13131f;
+  --secondary-foreground: #e8e8f0;
+  --muted: #13131f;
+  --muted-foreground: #6b6b8a;
+  --accent: #7c3aed;
+  --accent-foreground: #ffffff;
+  --destructive: #ef4444;
+  --border: #1e1e30;
+  --input: #1e1e30;
+  --ring: #7c3aed;
+  --cortex: #7c3aed;
+  --cortex-dark: #5b21b6;
+  --ue-orange: #f97316;
+  --ue-blue: #38bdf8;
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: #08080f; }
+::-webkit-scrollbar-thumb { background: #1e1e30; border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: #7c3aed; }
+
+/* Glow effects */
+.text-glow-purple {
+  text-shadow: 0 0 20px rgba(124,58,237,0.6), 0 0 40px rgba(124,58,237,0.3);
+}
+.text-glow-orange {
+  text-shadow: 0 0 20px rgba(249,115,22,0.6), 0 0 40px rgba(249,115,22,0.3);
+}
+.text-glow-blue {
+  text-shadow: 0 0 20px rgba(56,189,248,0.6), 0 0 40px rgba(56,189,248,0.3);
+}
+
+/* Glass card */
+.glass {
+  background: rgba(14,14,26,0.7);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(124,58,237,0.15);
+}
+
+/* UE grid pattern */
+.ue-grid {
+  background-image:
+    linear-gradient(rgba(124,58,237,0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(124,58,237,0.06) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+/* Gradient border */
+.gradient-border {
+  position: relative;
+  background: linear-gradient(#0e0e1a, #0e0e1a) padding-box,
+              linear-gradient(135deg, #7c3aed, #38bdf8, #7c3aed) border-box;
+  border: 1px solid transparent;
+}
+
+/* Shimmer */
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+.animate-shimmer {
+  background: linear-gradient(90deg, transparent, rgba(124,58,237,0.15), transparent);
+  background-size: 200% 100%;
+  animation: shimmer 3s infinite;
+}
+
+/* Scan line */
+@keyframes scan {
+  0% { transform: translateY(-100%); }
+  100% { transform: translateY(100vh); }
+}
+
+/* Float */
+@keyframes float-up {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-12px); }
+}
+.animate-float { animation: float-up 4s ease-in-out infinite; }
+
+/* Pulse glow */
+@keyframes pulse-glow {
+  0%, 100% { box-shadow: 0 0 20px rgba(124,58,237,0.3); }
+  50% { box-shadow: 0 0 50px rgba(124,58,237,0.7), 0 0 80px rgba(124,58,237,0.3); }
+}
+.animate-pulse-glow { animation: pulse-glow 3s ease-in-out infinite; }
+
+/* Corner decorations */
+.corner-tl { border-top: 2px solid; border-left: 2px solid; }
+.corner-tr { border-top: 2px solid; border-right: 2px solid; }
+.corner-bl { border-bottom: 2px solid; border-left: 2px solid; }
+.corner-br { border-bottom: 2px solid; border-right: 2px solid; }
