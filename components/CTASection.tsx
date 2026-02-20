@@ -3,12 +3,17 @@
 import { motion } from "framer-motion";
 import { ExternalLink, ArrowRight } from "lucide-react";
 
+function seededRandom(seed: number) {
+  const x = Math.sin(seed) * 10000;
+  return x - Math.floor(x);
+}
+
 const particles = Array.from({ length: 15 }, (_, i) => ({
   id: i,
-  size: Math.random() * 3 + 1,
-  x: Math.random() * 100,
-  delay: Math.random() * 6,
-  duration: Math.random() * 10 + 8,
+  size: seededRandom(i * 5 + 1) * 3 + 1,
+  x: seededRandom(i * 9 + 2) * 100,
+  delay: seededRandom(i * 13 + 3) * 6,
+  duration: seededRandom(i * 17 + 4) * 10 + 8,
 }));
 
 export default function CTASection() {
@@ -69,7 +74,7 @@ export default function CTASection() {
           className="text-lg text-[#6b6b8a] max-w-2xl mx-auto mb-10 leading-relaxed"
         >
           Stop context-switching between docs, Stack Overflow, and your editor.
-          Cortex brings AI-powered Blueprint creation directly into UE5 — free, native, and instant.
+          Cortex brings 18 AI-powered builders directly into UE5 — no subscription, no setup, just results.
         </motion.p>
 
         {/* CTAs */}
@@ -89,7 +94,7 @@ export default function CTASection() {
             className="group relative flex items-center gap-2 px-10 py-4 bg-[#7c3aed] text-white font-bold text-base rounded overflow-hidden"
           >
             <span className="relative z-10 flex items-center gap-2">
-              Get Cortex Free on Fab
+              Get Cortex on Fab — $79
               <ExternalLink className="w-4 h-4" />
             </span>
             <div className="absolute inset-0 bg-white/10 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-500" />
@@ -115,8 +120,8 @@ export default function CTASection() {
           className="flex flex-wrap items-center justify-center gap-6 text-xs text-[#6b6b8a]"
         >
           {[
-            "✓ Free forever",
-            "✓ No account required",
+            "✓ One-time purchase",
+            "✓ No subscription needed",
             "✓ UE5.7+ compatible",
             "✓ Windows 64-bit",
             "✓ Your API key, your data",

@@ -10,6 +10,16 @@ import {
   FolderOpen,
   Globe,
   RefreshCw,
+  Brain,
+  Clapperboard,
+  Workflow,
+  Volume2,
+  Bone,
+  Terminal,
+  Sparkles,
+  Film,
+  AudioLines,
+  Crosshair,
 } from "lucide-react";
 
 const features = [
@@ -115,6 +125,136 @@ const features = [
       "Performance audit across all project Blueprints",
       "Refactor nodes into reusable functions",
       "Find unused variables and complexity issues",
+    ],
+  },
+  {
+    icon: Brain,
+    title: "AI Behavior Trees",
+    color: "#e879f9",
+    description:
+      "Create complete Behavior Trees with Blackboard assets for AI characters — patrol, chase, and decision-making logic from chat.",
+    bullets: [
+      "Sequence, Selector, and SimpleParallel composites",
+      "Decorator and Task nodes with custom parameters",
+      "Blackboard keys with typed entries",
+      "Full tree structure from a single prompt",
+    ],
+  },
+  {
+    icon: Clapperboard,
+    title: "Animation Montages",
+    color: "#f472b6",
+    description:
+      "Build Animation Montages with sections, notifies, and blend configuration — ready to trigger from Blueprints.",
+    bullets: [
+      "Named sections with branching points",
+      "Anim Notifies and Notify States",
+      "Blend-in/out curves and play rate",
+      "Slot groups and composite sections",
+    ],
+  },
+  {
+    icon: Workflow,
+    title: "Animation Blueprints",
+    color: "#c084fc",
+    description:
+      "Generate Animation Blueprints with State Machines — states, transitions, and crossfade configuration from natural language.",
+    bullets: [
+      "State Machine graphs with named states",
+      "Transition rules with crossfade duration",
+      "Blend nodes and pose sampling",
+      "Automatic skeleton binding",
+    ],
+  },
+  {
+    icon: Volume2,
+    title: "Sound Cues & Attenuation",
+    color: "#22d3ee",
+    description:
+      "Create Sound Cue node graphs and Sound Attenuation assets — full audio pipeline from a single prompt.",
+    bullets: [
+      "WavePlayer, Mixer, Random, Looping, Delay nodes",
+      "Sound Attenuation with distance/falloff curves",
+      "Multi-source mixing and modulation",
+      "Volume, pitch, and spatialization settings",
+    ],
+  },
+  {
+    icon: Bone,
+    title: "IK Rigs & Retargeters",
+    color: "#fbbf24",
+    description:
+      "Set up IK Rigs with PBIK/FBIK solvers and IK Retargeters with automatic chain mapping between skeletons.",
+    bullets: [
+      "PBIK and FBIK solver configuration",
+      "Bone chain definitions (spine, limbs, fingers)",
+      "IK Retargeter with auto chain mapping",
+      "Cross-skeleton animation retargeting",
+    ],
+  },
+  {
+    icon: Terminal,
+    title: "Python Script Execution",
+    color: "#a3e635",
+    description:
+      "Execute LLM-generated Python scripts directly inside the UE editor with built-in sandboxing for safety.",
+    bullets: [
+      "Hybrid Python + JSON command workflows",
+      "Sandboxed execution (blocked: os, subprocess, socket)",
+      "Access to unreal module for editor automation",
+      "Inline output and error reporting in chat",
+    ],
+  },
+  {
+    icon: Sparkles,
+    title: "Niagara VFX",
+    color: "#f43f5e",
+    description:
+      "Create Niagara particle systems from chat — emitters, modules, renderers, and dynamic parameters for real-time VFX.",
+    bullets: [
+      "Emitter and System asset creation",
+      "Sprite, Mesh, and Ribbon renderers",
+      "Spawn rate, lifetime, velocity, and color modules",
+      "Dynamic parameters for runtime control",
+    ],
+  },
+  {
+    icon: Film,
+    title: "Level Sequencer",
+    color: "#60a5fa",
+    description:
+      "Build and edit Level Sequences for cinematics — camera cuts, animation tracks, audio, and keyframed properties.",
+    bullets: [
+      "Camera cut tracks with auto-binding",
+      "Actor animation and transform tracks",
+      "Audio tracks synced to timeline",
+      "Float, vector, and bool keyframe curves",
+    ],
+  },
+  {
+    icon: AudioLines,
+    title: "MetaSounds",
+    color: "#2dd4bf",
+    description:
+      "Create MetaSound patches with node-based audio graphs — oscillators, filters, envelopes, and trigger logic.",
+    bullets: [
+      "Oscillator nodes (sine, saw, square, noise)",
+      "Filter and envelope generators",
+      "Trigger inputs and audio parameter interfaces",
+      "Modular graph patching from natural language",
+    ],
+  },
+  {
+    icon: Crosshair,
+    title: "Pose Search & Motion Matching",
+    color: "#fb7185",
+    description:
+      "Configure Pose Search databases, schemas, and motion matching channels for fluid character animation.",
+    bullets: [
+      "Pose Search database and schema creation",
+      "Motion matching channel configuration",
+      "Animation sequence indexing",
+      "Trajectory and pose feature setup",
     ],
   },
 ];

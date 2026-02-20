@@ -4,19 +4,24 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 import { ChevronDown, Zap, Code2, Layers, Cpu } from "lucide-react";
 
+function seededRandom(seed: number) {
+  const x = Math.sin(seed) * 10000;
+  return x - Math.floor(x);
+}
+
 const particles = Array.from({ length: 25 }, (_, i) => ({
   id: i,
-  size: Math.random() * 3 + 1,
-  x: Math.random() * 100,
-  delay: Math.random() * 8,
-  duration: Math.random() * 12 + 10,
+  size: seededRandom(i * 3 + 1) * 3 + 1,
+  x: seededRandom(i * 7 + 2) * 100,
+  delay: seededRandom(i * 11 + 3) * 8,
+  duration: seededRandom(i * 13 + 4) * 12 + 10,
 }));
 
 const stats = [
   { icon: Code2, label: "Node Types", value: "11,000+" },
-  { icon: Layers, label: "Commands", value: "40+" },
+  { icon: Layers, label: "Commands", value: "50+" },
   { icon: Cpu, label: "AI Providers", value: "3" },
-  { icon: Zap, label: "Auto-Retry", value: "Built-in" },
+  { icon: Zap, label: "Builders", value: "18" },
 ];
 
 export default function HeroSection() {
@@ -134,8 +139,8 @@ export default function HeroSection() {
           Chat with{" "}
           <span className="text-[#7c3aed] font-semibold">Claude</span> or{" "}
           <span className="text-[#38bdf8] font-semibold">GPT</span> to create Blueprints,
-          build UMG widgets, generate PCG biomes, and manage assets —{" "}
-          <span className="text-white font-semibold">all without leaving the editor.</span>
+          build widgets, generate VFX, animate characters, design sounds, and more —{" "}
+          <span className="text-white font-semibold">18 builders, all inside the editor.</span>
         </motion.p>
 
         {/* CTA Buttons */}
@@ -154,7 +159,7 @@ export default function HeroSection() {
             className="group relative px-8 py-3.5 bg-[#7c3aed] text-white font-bold text-base rounded overflow-hidden"
           >
             <span className="relative z-10 flex items-center gap-2">
-              Get on Fab — Free
+              Get on Fab — $79
             </span>
             <div className="absolute inset-0 bg-white/10 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-500" />
           </motion.a>

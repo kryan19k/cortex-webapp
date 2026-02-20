@@ -19,7 +19,7 @@ const faqs = [
   },
   {
     q: "How much does it cost to use Cortex?",
-    a: "Cortex is $99 (Standard) or $175 (Professional) — a one-time purchase on Fab. On top of that, you pay for the AI API calls you make directly to Anthropic or OpenAI at their standard rates. A typical Blueprint creation request costs $0.01–0.05 with claude-sonnet-4-6.",
+    a: "Cortex is a one-time purchase on Fab — $79 for Personal (individual creators or small teams under $100k revenue) or $199 for Professional (studios or entities over $100k revenue). Both tiers include all 18 builders and every feature. On top of that, you pay for the AI API calls you make directly to Anthropic or OpenAI at their standard rates. A typical request costs $0.01–0.05 with Claude Sonnet. No subscriptions.",
   },
   {
     q: "Is my API key secure?",
